@@ -3,6 +3,8 @@ import plotly.express as px
 import pandas as pd
 from PIL import Image
 import os
+import path
+import sys
 with st.sidebar:
     st.write("Data Engineer at Infosys Ltd.")
     st.write("**Upcoming** Senior Data Analyst at Accenture")
@@ -39,7 +41,11 @@ st.plotly_chart(fig)
 
 st.markdown("# **Achievements**")
 
-image = Image.open(os.path.join("ach1.png"))
+dir = path.Path(__file__).abspath()
+sys.append.path(dir.parent.parent)
+
+path_to_image = 'ach1.png'
+image = Image.open(os.path.join(f"{path_to_image}"))
 st.image(image, caption='Business Ninja Award')
 image = Image.open("ach2.jpeg")
 st.image(image, caption='Rising Star Award')
