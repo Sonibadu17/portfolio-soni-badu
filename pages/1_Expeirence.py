@@ -42,7 +42,7 @@ st.plotly_chart(fig)
 st.markdown("# **Achievements**")
 
 dir = path.Path(__file__).abspath()
-sys.append.path(dir.parent.parent)
+sys.path.append(dir.parent.parent)
 
 path_to_image = 'ach1.png'
 image = Image.open(os.path.join(f"{path_to_image}"))
