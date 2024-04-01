@@ -1,5 +1,5 @@
 import streamlit as st
-
+from PIL import Image
 st.set_page_config(
     page_title="Soni's Portfolio",
     page_icon=":wave:",
@@ -21,3 +21,6 @@ st.markdown("""
      Committed to delivering high-quality data solutions that drive actionable insights and business value.
 
 """)
+image = Image.open(os.path.join("/assets/ach1.png"))
+st.image(image, caption='Business Ninja Award')
+
