@@ -44,7 +44,7 @@ st.markdown("# **Achievements**")
 dir = path.Path(__file__).abspath()
 sys.path.append(dir.parent.parent)
 
-path_to_image = 'ach1.png'
+path_to_image = './assets/ach1.png'
 image = Image.open(os.path.join(f"{path_to_image}"))
 st.image(image, caption='Business Ninja Award')
 image = Image.open("ach2.jpeg")
