@@ -1,6 +1,7 @@
 import streamlit as st
 import plotly.express as px
 import pandas as pd
+from PIL import Image
 with st.sidebar:
     st.write("Data Engineer at Infosys Ltd.")
     st.write("**Upcoming** Senior Data Analyst at Accenture")
@@ -37,5 +38,7 @@ st.plotly_chart(fig)
 
 st.markdown("# **Achievements**")
 
-st.image('ach1.png', caption='Business Ninja Award')
-st.image('ach2.jpeg', caption='Rising Star Award')
+image = Image.open('ach1.png')
+st.image(image, caption='Business Ninja Award')
+image = Image.open('ach2.jpeg')
+st.image(image, caption='Rising Star Award')
