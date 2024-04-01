@@ -38,7 +38,7 @@ st.plotly_chart(fig)
 
 st.markdown("# **Achievements**")
 
-image = Image.open('ach1.png')
+image = Image.open("ach1.png")
 st.image(image, caption='Business Ninja Award')
-image = Image.open('ach2.jpeg')
+image = Image.open("ach2.jpeg")
 st.image(image, caption='Rising Star Award')
