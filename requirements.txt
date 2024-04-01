@@ -3,4 +3,3 @@ plotly
 streamlit
 pillow
 path
-fpdf
