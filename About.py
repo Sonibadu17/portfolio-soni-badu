@@ -14,7 +14,12 @@ with st.sidebar:
 
     file_path = 'assets/Soni_Badu_Resume.pdf'
     file_pathm = os.path.join(f"{file_path}")
-    st.markdown(f'<a href="{file_pathm}">Resume</a>', unsafe_allow_html=True)
+    with open(f"{file_pathm}", "rb") as pdf_file:
+        PDFbyte = pdf_file.read()
+    st.download_button(label="Resume",
+                    data=PDFbyte,
+                    file_name="Soni_Badu_Resume.pdf",
+                    mime='application/octet-stream')
     
 st.write("# Welcome to Soni's Job Profile! :wave:")
 st.markdown("""
